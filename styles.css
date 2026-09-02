@@ -236,29 +236,6 @@ h2 {
 }
 .link:hover { text-decoration-color: var(--c-corridor); }
 
-.facets {
-  list-style: none;
-  margin: var(--s-5) 0 0;
-  padding: 0;
-  border-top: 1px solid var(--c-rule-2);
-}
-.facets li {
-  display: grid;
-  grid-template-columns: 6rem minmax(0, 1fr);
-  gap: var(--s-4);
-  padding-block: var(--s-3);
-  border-bottom: 1px solid var(--c-rule-2);
-}
-.facet__k {
-  font-family: var(--f-mono);
-  font-size: var(--t-micro);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-ink-3);
-  padding-top: 0.15em;
-}
-.facet__v { font-size: var(--t-fine); color: var(--c-ink-2); }
-
 /* ── principles ───────────────────────────────────────────── */
 
 .principles {
@@ -278,31 +255,33 @@ h2 {
 }
 .principle p { margin: 0; font-size: var(--t-fine); color: var(--c-ink-2); }
 
-/* ── company record ───────────────────────────────────────── */
+/* ── enquiry lanes ────────────────────────────────────────── */
 
-.record {
-  margin: 0;
-  background: var(--c-panel);
-  border: var(--rule);
-  border-radius: var(--radius);
+/* A label/value grid: the left column holds a phrase rather than a one-word
+   tag, so it is wider than a plain definition list would need. */
+.lanes {
+  list-style: none;
+  margin: 0 0 var(--s-6);
+  padding: 0;
+  border-top: 1px solid var(--c-rule-2);
+  max-width: 64rem;
 }
-.record__row {
+.lanes li {
   display: grid;
-  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  grid-template-columns: 13rem minmax(0, 1fr);
   gap: var(--s-4);
-  padding: var(--s-4) var(--s-5);
+  padding-block: var(--s-4);
   border-bottom: 1px solid var(--c-rule-2);
 }
-.record__row:last-child { border-bottom: 0; }
-.record dt {
+.lane__k {
   font-family: var(--f-mono);
   font-size: var(--t-micro);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--c-ink-3);
-  padding-top: 0.15em;
+  padding-top: 0.2em;
 }
-.record dd { margin: 0; font-size: var(--t-fine); }
+.lane__v { font-size: var(--t-fine); color: var(--c-ink-2); }
 
 /* ── contact ──────────────────────────────────────────────── */
 
@@ -339,9 +318,7 @@ h2 {
 
 @media (max-width: 46rem) {
   .product,
-  .facets li,
-  .record__row { grid-template-columns: minmax(0, 1fr); }
-  .facets li { gap: var(--s-1); }
-  .record__row { gap: var(--s-2); }
+  .lanes li { grid-template-columns: minmax(0, 1fr); }
+  .lanes li { gap: var(--s-1); }
   .hero { padding-block: var(--s-7) var(--s-6); }
 }

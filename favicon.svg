@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" fill="#f2f2f0"/>
+  <!-- Three rails; the last one derails. -->
+  <rect x="7"  y="10" width="34" height="6" fill="#0e0e0f"/>
+  <rect x="7"  y="21" width="34" height="6" fill="#0e0e0f"/>
+  <g transform="translate(7 32) skewX(-22)">
+    <rect width="34" height="6" fill="#6b76e5"/>
+  </g>
+</svg>

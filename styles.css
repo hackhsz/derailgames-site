@@ -227,6 +227,8 @@ h2 {
   color: var(--c-ink-2);
 }
 
+.product + .product { margin-top: var(--s-5); }
+
 .link {
   color: var(--c-navy);
   text-decoration-color: var(--c-corridor-f);
